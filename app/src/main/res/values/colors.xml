@@ -8,13 +8,17 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
 
-    <!--  AoD  -->
+    <!--  Monarch Theme -->
     <!-- Background colors -->
-    <color name="background">#FFFFFF</color>
+    <color name="background">#000000</color>
+    
+    <!-- Monarch Accent Colors -->
+    <color name="monarch_gold">#D4AF37</color>
+    <color name="monarch_dark_gold">#B8941F</color>
 
     <!-- Text colors -->
-    <color name="text_primary">#1F1F1F</color>
-    <color name="text_secondary">#6A7383</color>
+    <color name="text_primary">#D4AF37</color>
+    <color name="text_secondary">#B8941F</color>
     <color name="text_digit_default">#36373A</color>
     <color name="text_digit_pressed">#FFFFFF</color>
     <color name="text_default">#FFFFFF</color>
@@ -28,12 +32,12 @@
     <color name="text_amount">#1F1F1F</color>
 
     <!-- Button colors -->
-    <color name="button_default">#635BFF</color>
-    <color name="button_pressed">#453ECC</color>
-    <color name="button_disable">#B3635BFF</color>
-    <color name="button_secondary_default">#EAEDEF</color>
-    <color name="button_secondary_pressed">#DCDEE1</color>
-    <color name="button_secondary_disable">#B3EAEDEF</color>
+    <color name="button_default">@color/monarch_gold</color>
+    <color name="button_pressed">@color/monarch_dark_gold</color>
+    <color name="button_disable">#B3D4AF37</color>
+    <color name="button_secondary_default">@color/monarch_dark_gold</color>
+    <color name="button_secondary_pressed">#B8941F</color>
+    <color name="button_secondary_disable">#B3B8941F</color>
     <color name="menu_button">#0570DE</color>
     <color name="button_back">#778292</color>
     <color name="button_right_arrow">#FFFFFF</color>
