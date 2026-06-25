@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+ android:id="@+id/fragment_splash_container"
+    android:layout_width="match_parent"
+ android:layout_height="match_parent"
+ android:background="#000000">
+
+    <!-- Logo -->
+    <ImageView
+        android:layout_width="113dp"
+     android:layout_height="46dp"
+        android:src="@drawable/logo"
+        android:contentDescription="Monarch Detailing Logo" />
+
+    <!-- Service tier buttons -->
+    <android.widget.LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+   android:gravity="center"
+android:paddingTop="16dp" 
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+   app:layout_constraintTop_toTopOf="parent">
+  
+        <Button
+            android:id="@+id/button_signature"
+            style="?attr/materialButtonStyle" 
+ android:layout_width="300dp"
+ android:layout_height="64dp"
+ android:layout_marginBottom="12dp"
+android:textColor="#D4AF37" 
+ android:backgroundTint="#000000"
+android:text="✨ Signature Detail" />
+
+        <Button
+            android:id="@+id/button_executive"
+ style="?attr/materialButtonStyle" 
+android:layout_width="300dp"
+ android:layout_height="64dp"
+ android:layout_marginBottom="12dp" 
+android:textColor="#D4AF37"
+ android:backgroundTint="#000000" 
+android:text="⭐ Executive Detail" />
+
+        <Button
+            android:id="@+id/button_pre_sale"
+ style="?attr/materialButtonStyle" 
+android:layout_width="300dp"
+ android:layout_height="64dp"
+ android:layout_marginBottom "12dp" 
+android:textColor="#D4AF37"
+ android:backgroundTint="#000000"
+android:text="🛒 Pre-Sale" />
+
+        <Button
+            android:id="@+id/button_custom_amount"
+ style="?attr/materialButtonStyle" 
+android:layout_width="300dp"
+ android:layout_height="64dp"
+ android:textSize="16sp" 
+android:textColor="#D4AF37"
+ android:backgroundTint="#000000" 
+android:text="💰 Custom Amount" />
+
+    </android.widget.LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
