@@ -10,7 +10,7 @@
 
     <!--  Monarch Theme -->
     <!-- Background colors -->
-    <color name="background">#000000</color>
+    <color name="primaryColor">#000000</color>
     
     <!-- Monarch Accent Colors -->
     <color name="monarch_gold">#D4AF37</color>
