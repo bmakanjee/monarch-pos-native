@@ -57,9 +57,9 @@ dependencies {
     implementation("androidx.activity:activity-compose:1.8.2")
     implementation("androidx.lifecycle:lifecycle-runtime-compose:2.6.2")
 
-    // Stripe Terminal SDK
-    implementation("com.stripe:stripeterminal-localnetwork:5.6.0")
+    // Stripe Terminal SDK (Apps on Devices)
     implementation("com.stripe:stripeterminal-core:5.6.0")
+    implementation("com.stripe:stripeterminal-appsondevices:5.6.0")
 
     // HTTP for BackendClient
     implementation("com.squareup.okhttp3:okhttp:4.12.0")

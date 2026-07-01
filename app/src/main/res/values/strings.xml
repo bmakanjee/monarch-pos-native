@@ -30,8 +30,6 @@
     <string name="checkout">Checkout</string>
     <string name="amount_entered">Amount entered</string>
     <string name="settings">Settings</string>
-    <string name="monarch_logo_desc">Monarch Detailing Logo</string>
-
     <!-- Monarch Service Tier Buttons -->
     <string name="signature_service">⭐ Signature</string>
     <string name="executive_service">★ Executive</string>
@@ -41,8 +39,6 @@
     <!-- Status Line -->
     <string name="today_sales_today">Today: %d sales · $%.2f</string>
     <string name="status_today_default">Today: 0 sales · $0.00</string>
-    <string name="monarch_logo_desc">Monarch Detailing Logo</string>
-
     <string name="error_fail_to_send_email_receipt">Failed to send receipt email</string>
     <string name="error_fail_to_create_payment_intent">Failed to create PaymentIntent</string>
     <string name="error_fail_to_capture_payment_intent">Failed to capture PaymentIntent</string>

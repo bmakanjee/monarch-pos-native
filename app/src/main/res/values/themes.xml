@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- Base application theme. -->
-    <style name="Theme.AOD_SampleApp" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+    <style name="Theme.MonarchPOS" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/monarch_gold</item>
         <item name="colorPrimaryVariant">@color/monarch_dark_gold</item>

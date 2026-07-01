@@ -14,5 +14,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "AOD_SampleApp"
+rootProject.name = "MonarchPOS"
 include(":app")
