@@ -1,3 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <color name="monarch_gold">#FFD700</color>
+    <color name="monarch_dark_gold">#B8860B</color>
+    <color name="black">#000000</color>
 </resources>
