@@ -23,8 +23,8 @@ fun CustomAmountScreen(
     // State: raw digit string e.g. "19900" = $199.00
     var digits by remember { mutableStateOf("") }
 
-    val amountCents: Int get() = digits.toIntOrNull() ?: 0
-    val displayAmount: String get() = "${"$%.2f".format(amountCents / 100.0)}"
+    val amountCents: Int = digits.toIntOrNull() ?: 0
+    val displayAmount: String = "${"$%.2f".format(amountCents / 100.0)}"
 
     val presets = listOf(5000, 10000, 25000)  // $50, $100, $250
 
