@@ -50,4 +50,8 @@
     <string name="no_receipt">No receipt</string>
     <string name="send">Send</string>
     <string name="invalid_email">"Invalid email"</string>
+
+    <!-- Missing strings referenced in layouts -->
+    <string name="back">Back</string>
+    <string name="monarch_logo_desc">Monarch Detailing logo</string>
 </resources>
