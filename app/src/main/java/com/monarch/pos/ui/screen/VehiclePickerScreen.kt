@@ -18,7 +18,7 @@ import com.monarch.pos.ui.theme.MonarchBlack
 @Composable
 fun VehiclePickerScreen(
     service: Service,
-    onVehicleSelected: (String) -> Unit,
+    onVehicleSelected: (VehicleType) -> Unit,
     onBack: () -> Unit
 ) {
     Column(
