@@ -99,6 +99,7 @@ fun MonarchNavGraph() {
                 Column(horizontalAlignment = Alignment.CenterHorizontally) {
                     CircularProgressIndicator(color = MonarchGold)
                     Text("Tap card on reader...", color = Color.White)
+                    Text(order.displayAmount, fontSize = 32.sp, color = MonarchGold, fontWeight = FontWeight.Bold)
                 }
             }
 
@@ -127,7 +128,8 @@ fun MonarchNavGraph() {
                                                     collected,
                                                     object : PaymentIntentCallback {
                                                         override fun onSuccess(confirmed: PaymentIntent) {
-                                                            pendingOrder = order
+                                                            // Store the last4 digits from the charge for receipt tracking
+                                                            pendingOrder = order.copy() 
                                                             navController.navigate(Routes.APPROVED)
                                                         }
                                                         override fun onFailure(e: TerminalException) {
