@@ -1,0 +1,10 @@
+# KtLint configuration for Monarch POS Native project
+
+# Enable all rules by default (except the disabled ones)
+disabled_rules = [
+    # Disabled because we prefer to keep trailing commas in some cases
+    "trailing-comma-on-call-site",
+    "trailing-comma-on-declaration-site"
+]
+
+# Rule set configurations can go here if needed

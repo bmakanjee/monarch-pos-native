@@ -25,9 +25,12 @@ jobs:
             ~/.gradle/wrapper
           key: gradle-${{ hashFiles('**/*.gradle*') }}
 
+      - name: Validate Kotlin code with ktlint
+        run: ./gradlew ktlintCheck
+
       - name: Write keystore from secret
         run: |
-          echo "${{ secrets.KEYSTORE_BASE64 }}" | base64 -d > monarch-pos.keystore
+          echo "${{ secrets.KEYSTORE_BASE64 }}" | base64 -d > "$GITHUB_WORKSPACE/monarch-pos.keystore"
 
       - name: Build signed release APK
         env:
@@ -38,7 +41,7 @@ jobs:
           KEY_PASSWORD: ${{ secrets.KEY_PASSWORD }}
         run: |
           ./gradlew assembleRelease \
-            -Pandroid.injected.signing.store.file=monarch-pos.keystore \
+            -Pandroid.injected.signing.store.file="$GITHUB_WORKSPACE/monarch-pos.keystore" \
             -Pandroid.injected.signing.store.password=$KEYSTORE_PASSWORD \
             -Pandroid.injected.signing.key.alias=$KEY_ALIAS \
             -Pandroid.injected.signing.key.password=$KEY_PASSWORD

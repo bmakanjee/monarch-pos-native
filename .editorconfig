@@ -1,0 +1,11 @@
+// KtLint configuration
+// See: https://github.com/pinterest/ktlint/blob/master/ktlint-core/src/main/kotlin/com/pinterest/ktlint/core/KtLint.kt#L25
+
+# Enable all rules by default (except the disabled ones)
+disabled_rules = [
+    # Disabled because we prefer to keep trailing commas
+    "trailing-comma-on-call-site",
+    "trailing-comma-on-declaration-site"
+]
+
+# Custom rule sets can be added here if needed
