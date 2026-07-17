@@ -153,7 +153,7 @@ fun MonarchNavGraph() {
                                                                     }
                                                                 } catch (e: Exception) {
                                                                     // Log error but don't break user experience 
-                                                                    println(\"Jobber job creation failed: ${e.message}\")
+                                                                    println("Jobber job creation failed: ${e.message}")
                                                                     navController.navigate(Routes.APPROVED)
                                                                 }
                                                             }
