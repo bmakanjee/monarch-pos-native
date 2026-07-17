@@ -19,6 +19,7 @@ import com.monarch.pos.model.Order
 import com.monarch.pos.model.Service
 import com.monarch.pos.model.VehicleType
 import com.monarch.pos.network.BackendClient
+import com.monarch.pos.network.JobberClient
 import com.monarch.pos.ui.theme.MonarchBlack
 import com.monarch.pos.ui.theme.MonarchGold
 import com.stripe.stripeterminal.Terminal
@@ -132,7 +133,30 @@ fun MonarchNavGraph() {
                                                         override fun onSuccess(confirmed: PaymentIntent) {
                                                             // Store the last4 digits from the charge for receipt tracking
                                                             pendingOrder = order.copy() 
-                                                            navController.navigate(Routes.APPROVED)
+                                                            
+                                                            // Create Jobber job after successful payment (with error handling)
+                                                            scope.launch {
+                                                                try {
+                                                                    val serviceId = order.service?.id ?: ""
+                                                                    val vehicleType = order.vehicleType?.name?.lowercase() ?: ""
+                                                                    if (serviceId.isNotEmpty() && vehicleType.isNotEmpty()) {
+                                                                        val success = JobberClient.createJob(
+                                                                            serviceId = serviceId,
+                                                                            vehicleType = vehicleType,
+                                                                            amountCents = order.amountCents
+                                                                        )
+                                                                        
+                                                                        // Even if job creation fails, the payment is still considered successful
+                                                                        navController.navigate(Routes.APPROVED)
+                                                                    } else {
+                                                                        navController.navigate(Routes.APPROVED)
+                                                                    }
+                                                                } catch (e: Exception) {
+                                                                    // Log error but don't break user experience 
+                                                                    println(\"Jobber job creation failed: ${e.message}\")
+                                                                    navController.navigate(Routes.APPROVED)
+                                                                }
+                                                            }
                                                         }
                                                         override fun onFailure(e: TerminalException) {
                                                             navController.navigate(Routes.DECLINED)
